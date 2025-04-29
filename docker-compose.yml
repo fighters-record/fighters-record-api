@@ -20,6 +20,8 @@ services:
       - .:/app
     environment:
       - DATABASE_URL=postgresql://postgres:password@db:5432/postgres
+      - RAILS_ENV=development
+      - NODE_ENV=development
     depends_on:
       - db
 

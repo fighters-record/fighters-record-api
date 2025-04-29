@@ -7,6 +7,10 @@ RUN apt-get update -qq && apt-get install -y \
     build-essential \
     libpq-dev
 
+# RAILS_ENVを明示的に指定
+ENV RAILS_ENV=development
+ENV NODE_ENV=development
+
 WORKDIR /app
 
 COPY Gemfile Gemfile.lock ./
