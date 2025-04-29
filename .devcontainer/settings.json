@@ -5,6 +5,10 @@
     "diagnostics": true,
     "documentSymbols": true
   },
-  "ruby.useLanguageServer": true
+  "ruby.useLanguageServer": true,
+  "ruby.formatting.provider": "none",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
 }
 

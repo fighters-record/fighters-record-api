@@ -29,3 +29,6 @@ console:
 
 logs:
 	docker compose logs -f api
+
+lint:
+	bundle exec rubocop
