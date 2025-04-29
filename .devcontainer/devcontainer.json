@@ -1,0 +1,16 @@
+{
+  "name": "fighters-record-api-dev",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "api",
+  "workspaceFolder": "/app",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "ruby.useLanguageServer": true
+  },
+  "extensions": [
+    "Shopify.ruby-lsp",
+    "GitHub.vscode-github-actions",
+    "eamodio.gitlens",
+    "ms-azuretools.vscode-docker"
+  ]
+}

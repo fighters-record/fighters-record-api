@@ -1,0 +1,10 @@
+{
+  "editor.formatOnSave": true,
+  "rubyLsp.enabledFeatures": {
+    "formatting": true,
+    "diagnostics": true,
+    "documentSymbols": true
+  },
+  "ruby.useLanguageServer": true
+}
+
