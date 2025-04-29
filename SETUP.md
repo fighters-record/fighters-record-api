@@ -92,5 +92,3 @@ docker compose exec api rails db:migrate
 | APIサーバ (Rails) | http://localhost:3000 | Rails標準ポート |
 | DBサーバ (PostgreSQL) | localhost:5432 | ユーザ名/パスワード postgres/password |
 
-
-# vscodeセットアップ

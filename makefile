@@ -32,3 +32,9 @@ logs:
 
 lint:
 	bundle exec rubocop
+
+lint-fix:
+	bundle exec rubocop -A
+
+# lint-ci:
+# TODO: 将来的にやるよ
