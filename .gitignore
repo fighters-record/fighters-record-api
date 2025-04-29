@@ -1,0 +1,39 @@
+# Rails standard
+/.bundle
+/log/*
+/tmp/*
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/public/assets
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+.byebug_history
+
+# Storage (ActiveStorageとか使う場合)
+/storage/*
+
+# dotenv
+.env
+.env.*.local
+
+# Rails credentials
+/config/master.key
+/config/credentials/*.key
+
+# Docker
+/.docker
+*.pid
+
+# System
+*.swp
+*.swo
+.DS_Store
+.idea/
+.vscode/
+
+# Coverage (テストカバレッジツール使う場合)
+/coverage/
+/coverage/assets/
+
