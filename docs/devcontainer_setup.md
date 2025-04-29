@@ -67,10 +67,19 @@ bundle install
 rails db:create db:migrate
 ```
 
-### 7. Railsサーバ起動
+### 7. サーバの状態確認
+
+Docker起動時にRailsサーバが既に起動しているため、以下のURLで動作確認できます。
+http://localhost:3000
+
+
+ターミナルで状態を確認したい場合は以下を実行します。
 
 ```bash
-rails server -b 0.0.0.0
+docker compose logs api
 ```
+
+これでDevContainerの環境が整い、開発が可能となります。
+
 
 これでDevContainerの環境が整い、開発が可能となります。
