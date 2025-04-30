@@ -27,8 +27,8 @@ fighters-record-api は Docker + docker-compose を利用して動作します�
 #### 開発用（docker-compose.yml）
 
 ```bash
-docker compose build --no-cache
-docker compose up
+make docker-build
+make docker-up
 ```
 
 - APIサーバ (Rails) → localhost:3000
@@ -44,11 +44,12 @@ docker compose -f docker-compose.prod.yml up --build
 
 ### 3. 初期セットアップ
 
-コンテナが起動したら、以下を実行してDBを初期化します。
+コンテナが起動したら、以下を実行してDBを初期化しrspecの実行を
+行って問題なく通ることを確認します
 
 ```bash
-make db-setup
-
+make docker-db-setup
+make docker-rspec
 ---
 
 
