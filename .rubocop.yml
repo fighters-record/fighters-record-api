@@ -13,6 +13,7 @@ AllCops:
     - 'app/mailers/application_mailer.rb'
     - 'config/application.rb'
     - 'spec/**/*'
+    - 'db/migrate/*.rb'
 
 Layout/LineLength:
   Max: 120
