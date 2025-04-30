@@ -72,4 +72,5 @@ RSpec.configure do |config|
  
   # type: :request に限定してヘルパー有効化
   config.include RequestHelper, type: :request
+  config.include FactoryBot::Syntax::Methods
 end

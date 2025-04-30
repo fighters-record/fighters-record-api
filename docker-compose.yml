@@ -19,7 +19,7 @@ services:
     volumes:
       - .:/app
     environment:
-      - DATABASE_URL=postgresql://postgres:password@db:5432/postgres
+      - DATABASE_URL=postgresql://postgres:password@db:5432/fighters_record_api_development
       - RAILS_ENV=development
       - NODE_ENV=development
     depends_on:

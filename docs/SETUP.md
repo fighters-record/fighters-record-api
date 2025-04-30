@@ -47,34 +47,10 @@ docker compose -f docker-compose.prod.yml up --build
 コンテナが起動したら、以下を実行してDBを初期化します。
 
 ```bash
-make db-create
-make db-migrate
-```
-
-または手動で：
-
-```bash
-docker compose exec api rails db:create
-docker compose exec api rails db:migrate
-```
+make db-setup
 
 ---
 
-### 4. Makefile活用（便利コマンド集）
-
-| コマンド | 内容 |
-|:--|:--|
-| `make up` | docker compose up |
-| `make down` | docker compose down |
-| `make build` | docker compose build |
-| `make prod-up` | 本番ビルド＆起動 |
-| `make bash` | コンテナに入る |
-| `make db-create` | データベース作成 |
-| `make db-migrate` | マイグレーション実行 |
-| `make console` | Railsコンソールを起動 |
-| `make logs` | コンテナのログを見る |
-
----
 
 ## 🛠 注意事項
 
