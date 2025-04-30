@@ -36,5 +36,9 @@ lint:
 lint-fix:
 	bundle exec rubocop -A
 
-# lint-ci:
+rspec:
+	bundle exec rspec
+
 # TODO: 将来的にやるよ
+# lint-ci:
+# rspec-ci:
