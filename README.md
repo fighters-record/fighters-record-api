@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### 🔍 シナリオテストについて
 
-Things you may want to cover:
+- `spec/scenario/` 配下に外部APIを対象とした結合テストを格納しています
+- デフォルトでは実行されません（`.rspec` にて `--tag ~scenario` を指定）
+- 実行するには以下のように `API_HOST` を指定してください：
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+make docker-rspec-scenario

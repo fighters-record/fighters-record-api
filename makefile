@@ -31,8 +31,13 @@ docker-console:
 docker-logs:
 	docker compose logs -f api
 
+# 単体テスト
 docker-rspec:
 	docker compose exec api bundle exec rspec
+
+# シナリオテストのみ。apiサーバを起動しておく必要あり
+docker-rspec-scenario:
+	API_HOST=http://localhost:3000 docker compose exec api bundle exec rspec --tag scenario
 
 docker-lint:
 	docker compose exec api bundle exec lint
@@ -66,7 +71,7 @@ docker-db-test-prepare:
 	docker compose exec api rails db:create RAILS_ENV=test
 	docker compose exec api rails db:schema:load RAILS_ENV=test
 
-# CI用
+# CI/コンテナから実行用
 lint:
 	bundle exec rubocop
 
@@ -74,4 +79,15 @@ lint-fix:
 	bundle exec rubocop -A
 
 rspec:
-	bundle exec rspec 
+	RAILS_ENV=test bundle exec rspec 
+
+# 単体テストのファイル指定実行
+t/%:
+	RAILS_ENV=test bundle exec rspec spec/$*
+
+# シナリオテストのファイル指定実行
+t:scenario/%:
+	API_HOST=http://localhost:3000 RAILS_ENV=test bundle exec rspec spec/$*
+
+rspec-scenario:
+	API_HOST=http://localhost:3000 RAILS_ENV=test bundle exec rspec --tag scenario

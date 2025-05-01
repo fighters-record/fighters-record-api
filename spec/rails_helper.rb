@@ -73,4 +73,9 @@ RSpec.configure do |config|
   # type: :request に限定してヘルパー有効化
   config.include RequestHelper, type: :request
   config.include FactoryBot::Syntax::Methods
+
+  # シナリオテストの排他実行用タグ
+  config.define_derived_metadata(file_path: %r{spec/scenario}) do |metadata|
+    metadata[:scenario] = true
+  end
 end

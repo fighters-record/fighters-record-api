@@ -15,7 +15,6 @@ RSpec.describe 'Api::V1::Users', type: :request do
 
     it 'creates a user with valid params' do
       post '/api/v1/users', params: valid_params, as: :json, headers: { 'HOST' => 'localhost' }
-      puts response.body  # ← ここ追加
       expect(response).to have_http_status(:created)
       expect(JSON.parse(response.body)['data']['email']).to eq(valid_params[:user][:email])
     end
